@@ -11,7 +11,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class SnailTest {
     @ParameterizedTest
-    @MethodSource("Data")
+    @MethodSource("data")
     public void test(String expected, String a, String b, String top) {
         final String nums = a + System.lineSeparator() + b + System.lineSeparator() + top + System.lineSeparator();
 
@@ -37,7 +37,7 @@ class SnailTest {
         }
     }
 
-    static Stream<Arguments> Data() {
+    static Stream<Arguments> data() {
         return Stream.of(
                 arguments("8", "3", "2", "10"),
                 arguments("6", "4", "2", "14"),
@@ -45,6 +45,7 @@ class SnailTest {
                 arguments("Impossible", "4", "4", "10"),
                 arguments("Impossible", "5", "6", "10"),
                 arguments("1", "5", "7", "2"),
+                arguments("1", "5", "5", "3"),
                 arguments("10", "2", "1", "11"),
                 arguments("4", "4", "1", "13")
         );
