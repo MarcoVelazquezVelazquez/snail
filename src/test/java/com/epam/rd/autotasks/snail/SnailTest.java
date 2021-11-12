@@ -41,12 +41,16 @@ class SnailTest {
         return Stream.of(
                 arguments("8", "3", "2", "10"),
                 arguments("6", "4", "2", "14"),
-                arguments("7", "4", "3", "10"), //7 is right
+                arguments("7", "4", "3", "10"),
                 arguments("Impossible", "4", "4", "10"),
                 arguments("Impossible", "5", "6", "10"),
                 arguments("1", "5", "7", "2"),
                 arguments("1", "5", "5", "3"),
                 arguments("10", "2", "1", "11"),
+                arguments("1", "12", "0", "10"),
+                arguments("1", "12", "100", "10"),
+                arguments("1", "123", "256", "12"),
+                arguments("1", "123", "256", "123"),
                 arguments("4", "4", "1", "13")
         );
     }
