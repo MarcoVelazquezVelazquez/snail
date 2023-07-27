@@ -18,8 +18,6 @@ public class Snail
         //System.out.println("height of the tree");
         int heightOfTheTree = input.nextInt();
 
-
-
         int numberOfDays = 0;
 
         int distance = 0;
@@ -40,7 +38,8 @@ public class Snail
                 distance = distance - slidesDownEachDay;
 
                 if (distance == 0){
-                    System.out.println("Impossible");break;
+                    System.out.println("Impossible");
+                    return;
                 }
 
             }
